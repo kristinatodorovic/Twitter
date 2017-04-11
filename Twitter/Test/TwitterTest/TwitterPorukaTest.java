@@ -1,6 +1,6 @@
 package TwitterTest;
 
-import com.twitter.poruke.*;
+import com.twitter.poruke.TwitterPoruka;
 import static org.junit.Assert.*;
 
 import org.junit.After;
