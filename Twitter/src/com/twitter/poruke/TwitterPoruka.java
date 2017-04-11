@@ -1,33 +1,29 @@
 package com.twitter.poruke;
 
-/**
- * Ova klasa predstavlja Twitter poruku.
- * 
- * @author Kristina Todorovic
- * @version 1.0
- */
-
-
 public class TwitterPoruka {
+
+	/**
+	 * Ova klasa predstavlja Twitter poruku.
+	 * 
+	 * @author Kristina Todorovic
+	 * @version 1.0
+	 */
 
 	/**
 	 * Ime korisnika kao string.
 	 */
-
 	private String korisnik;
-	
+
 	/**
 	 * Poruka kao string.
 	 */
-	
 	private String poruka;
-	
+
 	/**
 	 * Metoda vraca ime korisnika.
 	 * 
 	 * @return ime korisnika kao string
 	 */
-
 	public String getKorisnik() {
 		return korisnik;
 	}
@@ -44,9 +40,9 @@ public class TwitterPoruka {
 	 *             <li>prazan string</li>
 	 *             </ul>
 	 */
-	
+
 	public void setKorisnik(String korisnik) {
-		if (korisnik == null || !korisnik.isEmpty())
+		if (korisnik == null || korisnik.isEmpty())
 			throw new RuntimeException("Ime korisnika mora biti uneto");
 		this.korisnik = korisnik;
 	}
@@ -57,11 +53,10 @@ public class TwitterPoruka {
 	 * @return poruka kao string
 	 */
 
-	
 	public String getPoruka() {
-		return "poruka";
+		return poruka;
 	}
-	
+
 	/**
 	 * Metoda postavlja novu vrednost za poruku.
 	 * 
@@ -77,7 +72,7 @@ public class TwitterPoruka {
 	 */
 
 	public void setPoruka(String poruka) {
-		if (this.poruka == null || this.poruka == new String("") || this.poruka.length() > 140)
+		if (poruka == null || poruka == "" || poruka.length() > 140)
 			throw new RuntimeException("Poruka mora biti uneta i mora imati najvise 140 znakova");
 		this.poruka = poruka;
 	}
@@ -88,7 +83,6 @@ public class TwitterPoruka {
 	 * @return korisnik i poruka u vidu stringa
 	 */
 
-	
 	public String toString() {
 		return "KORISNIK:" + korisnik + " PORUKA:" + poruka;
 	}
