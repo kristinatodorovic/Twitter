@@ -22,10 +22,13 @@ public class TwitterTest {
 		twt=null;
 	}
 
-	/*@Test
+	
 	public void testVratiSvePoruke() {
-		fail("Not yet implemented");
-	}*/
+		twt.unesi("Kristina", "Ovo je tvit.");
+		twt.unesi("Maja", "Twitter poruka");
+		
+		assertEquals(2,twt.vratiSvePoruke().size());
+	}
 
 	@Test
 	public void testUnesi() {
@@ -55,15 +58,22 @@ public class TwitterTest {
 		twt.unesi("Petar", "Tviiit!");
 		twt.unesi("Milan", "Ovaj tvit ima #rec.");
 		twt.unesi("Jovan", "Ovaj tvit ima #rec.");
-		twt.unesi("Milan", "Ovaj tvit ima #rec.");
-		twt.unesi("Milan", "Ovaj tvit ima #rec.");
 		
 		
 		TwitterPoruka[] tagovanePoruke=twt.vratiPoruke(5,"#rec");
 		
-		assertEquals(5,twt.vratiPoruke(5,"#rec").length);
+		int br=0;
+		
+		for(int i=0;i<tagovanePoruke.length;i++){
+			if(tagovanePoruke[i]!=null){
+				br++;
+			}
+		}
+		
+		assertEquals(3,br);
+		
 		assertEquals("Kristina",tagovanePoruke[0].getKorisnik());
-		assertEquals("Milan",tagovanePoruke[4].getKorisnik());
+		assertEquals("Milan",tagovanePoruke[1].getKorisnik());
 		assertEquals("Jovan",tagovanePoruke[2].getKorisnik());
 		
 		
