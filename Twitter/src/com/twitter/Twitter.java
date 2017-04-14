@@ -4,6 +4,7 @@ import java.util.LinkedList;
 import com.twitter.poruke.TwitterPoruka;
 
 	/**
+	 * Ova klasa predstavlja Twitter aplikaciju.
 	 * @author Kristina Todorovic
 	 * @version 1.0
 	 */

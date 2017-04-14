@@ -1,13 +1,12 @@
 package com.twitter.poruke;
-
-public class TwitterPoruka {
-
 	/**
 	 * Ova klasa predstavlja Twitter poruku.
 	 * 
 	 * @author Kristina Todorovic
 	 * @version 1.0
 	 */
+public class TwitterPoruka {
+
 
 	/**
 	 * Ime korisnika kao string.
